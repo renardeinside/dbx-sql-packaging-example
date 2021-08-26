@@ -1,0 +1,9 @@
+{
+  "environments": {
+    "default": {
+      "profile": "e2-demo-aws",
+      "workspace_dir": "/Shared/dbx/dbx_sql_packaging_example",
+      "artifact_location": "dbfs:/Shared/dbx/projects/dbx_sql_packaging_example"
+    }
+  }
+}
