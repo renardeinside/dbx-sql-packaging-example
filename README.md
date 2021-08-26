@@ -2,10 +2,23 @@
 
 Sample project on how to work with SQL files (and other packaged data) from the inside of Python-based dbx packages.
 
-## Writing SQL queries
+## Picking up arbitrary files
 
-At start, we would like to write some parametrized SQL files
+Do the following:
 
+1. Define a separate folder (let's call it `resources`) inside the python module
+2. Reference the filenames which shall be added as non-code data. Example could be found in `setup.py`
+3. Pick the file from the inside of Python runtime:
+```python
+import pkg_resources
+
+raw_csv_path = pkg_resources.resource_filename(
+    "<package name>", "resources/raw/username.csv"
+)
+query_path = pkg_resources.resource_filename(
+    "<package name>", "resources/sql/create_table.sql"
+)
+```
 
 ## References
 
